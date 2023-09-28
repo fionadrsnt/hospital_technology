@@ -1,23 +1,35 @@
 const router = require ('express').Router()
 const homeController = require('../controllers/homeController')
 const userController = require('../controllers/userController')
-const ProfileController =  require('../controllers/profileController')
-
+const profileController =  require('../controllers/profileController')
+const formLogin = require('../controllers/formLogin')
 //get Showhome
 router.get('/home', homeController.ShowHome)
 
 //get login
+<<<<<<< HEAD
+router.get('/login', formLogin.formLogin)
+=======
 
 router.get('/login', userController.createUser)
+>>>>>>> 1a8f29776bb755a211a212da75b7dd553d9c0b0c
 
 //post login
-router.post('/login',userController.postUser)
+router.post('/login', formLogin.postLogin)
+
+
+//get CreateRegist
+router.get('/regist', userController.createUser)
+
+//post createRegist
+router.post('/regist',userController.postUser)
+
 
 //get profile
-router.get('/createProfile',ProfileController.createProfile)
+router.get('/createProfile',profileController.createProfile)
 
 //post profile
-router.post('/postProfile',ProfileController.postProfile)
+router.post('/postProfile',profileController.postProfile)
 
 
 
