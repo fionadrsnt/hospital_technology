@@ -1,18 +1,17 @@
-const router = require('express').Router()
+const router = require ('express').Router()
 const homeController = require('../controllers/homeController')
 const userController = require('../controllers/userController')
 const ProfileController =  require('../controllers/profileController')
-const communityController = require('../controllers/communityController')
-
 
 //get Showhome
 router.get('/home', homeController.ShowHome)
 
 //get login
-router.get('/loginForm', userController.createUser)
+
+router.get('/login', userController.createUser)
 
 //post login
-router.post('/loginForm',userController.postUser)
+router.post('/login',userController.postUser)
 
 //get profile
 router.get('/createProfile',ProfileController.createProfile)
@@ -34,6 +33,7 @@ router.get('/formComment', communityController.viewCommentForm)
 
 //post comment 
 router.post('/postComment',communityController.postComment)
+
 
 
 
