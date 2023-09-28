@@ -7,6 +7,7 @@ const ProfileController =  require('../controllers/profileController')
 router.get('/home', homeController.ShowHome)
 
 //get login
+
 router.get('/login', userController.createUser)
 
 //post login
@@ -21,6 +22,17 @@ router.post('/postProfile',ProfileController.postProfile)
 
 
 
+//get community post
+router.get('/community', communityController.viewCommunity)
+
+//get post content
+router.get('/post', communityController.postContent)
+
+//get form comment
+router.get('/formComment', communityController.viewCommentForm)
+
+//post comment 
+router.post('/postComment',communityController.postComment)
 
 
 
