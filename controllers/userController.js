@@ -3,7 +3,7 @@ const {User} = require('../models')
 class userController{
 
     static createUser(req,res){
-        res.render("loginForm")
+        res.render("createUser")
      }
 
      static postUser(req, res) {

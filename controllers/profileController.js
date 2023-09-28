@@ -8,7 +8,6 @@ class userController{
 
    static postProfile(req, res) {
       const { displayName, picture, role, gender, userId } = req.body;
-      console.log(req.body);
       Profile.create({
           displayName: displayName,
           picture: picture,
@@ -17,10 +16,10 @@ class userController{
           userId: userId
       })
       .then(newUser => {
-         console.log(newUser);
           res.redirect('/home');
       })
       .catch(error => {
+        console.log(error);
           res.send('Error creating profile');
       });
   }
