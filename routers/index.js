@@ -1,11 +1,18 @@
 const router = require ('express').Router()
-const ProfileController =  require('../controllers/profileController')
 const homeController = require('../controllers/homeController')
+const userController = require('../controllers/userController')
+const ProfileController =  require('../controllers/profileController')
 const communityController = require('../controllers/communityController')
 
 
 //get Showhome
 router.get('/home', homeController.ShowHome)
+
+//get login
+router.get('/login', userController.createUser)
+
+//post login
+router.post('/login',userController.postUser)
 
 //get profile
 router.get('/createProfile',ProfileController.createProfile)
@@ -15,14 +22,16 @@ router.post('/postProfile',ProfileController.postProfile)
 
 
 
+
 //get community post
 router.get('/community', communityController.viewCommunity)
 
-//get tampilan form comment
+
+//get form comment
 router.get('/formComment', communityController.viewCommentForm)
 
-//post isi dari form comment
-router.post('/formComment', communityController)
+//post comment 
+router.post('/postComment',communityController.postComment)
 
 
 module.exports = router
