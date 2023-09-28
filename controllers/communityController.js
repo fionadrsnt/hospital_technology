@@ -6,6 +6,13 @@ class communityController {
         res.render('community')
     }
 
+    static viewCommentForm(req,res){
+        res.render('formComment')
+
+    }
+    static postComment(req,res){
+    }
+
     
 }
 

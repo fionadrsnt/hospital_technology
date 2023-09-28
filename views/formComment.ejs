@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Input with Left-aligned Button</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Center-align the text input */
+        .centered-input {
+            text-align: center;
+        }
+    </style>
+</head>
+    
+    <!-- header -->
+    <blockquote class="blockquote">
+        <h1>WE CARE!</h1>
+    </blockquote>
+
+    <!-- button -->
+    <a class="button-container">
+    <button type="button" class="btn btn-outline-secondary">Home</button>
+    <button type="button" class="btn btn-outline-secondary">FAQ</button>
+    <button type="button" class="btn btn-outline-secondary">Write Something</button>
+    </a>
+
+<!-- Comment Box -->
+<body>
+    <div class="container">
+        <h3 class="mt-5">Type your comment here:</h3>
+
+        <form action="submit.php" method="post">
+            <div class="mb-3">
+                <textarea class="form-control" id="text" name="text" rows="10" required></textarea>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" type="button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

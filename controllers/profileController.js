@@ -1,18 +1,13 @@
-const {User,Profile} = require('../models')
+const {Profile} = require('../models')
 
 class userController{
 
-    static registerForm(req,res){
-       res.render("registerForm")
+    static createProfile(req,res){
+       res.render("createProfile")
     }
 
-    static loginForm(req,res){
-      res.render("loginForm")
-   }
-
-   static postRegister(req, res) {
+   static postProfile(req, res) {
       const { displayName, picture, role, gender, userId } = req.body;
-      console.log(req.body);
       Profile.create({
           displayName: displayName,
           picture: picture,

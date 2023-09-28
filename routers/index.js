@@ -1,24 +1,28 @@
 const router = require ('express').Router()
-const userController =  require('../controllers/userController')
+const ProfileController =  require('../controllers/profileController')
 const homeController = require('../controllers/homeController')
 const communityController = require('../controllers/communityController')
+
 
 //get Showhome
 router.get('/home', homeController.ShowHome)
 
-//get register
-router.get('/', userController.registerForm)
-//post register
-router.post('/login', userController.postRegister)
+//get profile
+router.get('/createProfile',ProfileController.createProfile)
 
-//get login
-router.get('/login', userController.loginForm)
+//post profile
+router.post('/postProfile',ProfileController.postProfile)
+
 
 
 //get community post
 router.get('/community', communityController.viewCommunity)
 
+//get tampilan form comment
+router.get('/formComment', communityController.viewCommentForm)
 
+//post isi dari form comment
+router.post('/formComment', communityController)
 
 
 module.exports = router
