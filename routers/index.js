@@ -1,6 +1,7 @@
 const router = require ('express').Router()
 const userController =  require('../controllers/userController')
 const homeController = require('../controllers/homeController')
+const communityController = require('../controllers/communityController')
 
 //get Showhome
 router.get('/home', homeController.ShowHome)
@@ -14,6 +15,8 @@ router.post('/login', userController.postRegister)
 router.get('/login', userController.loginForm)
 
 
+//get community post
+router.get('/community', communityController.viewCommunity)
 
 
 
