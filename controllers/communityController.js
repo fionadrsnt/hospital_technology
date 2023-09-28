@@ -8,12 +8,16 @@ class communityController {
 
     static viewCommentForm(req,res){
         res.render('formComment')
-
+        
+    }
+    static postContent(req, res){
     }
     static postComment(req,res){
     }
-
     
+
+
+
 }
 
 module.exports = communityController
